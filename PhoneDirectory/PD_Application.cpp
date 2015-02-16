@@ -90,6 +90,13 @@ void do_remove_entry(Phone_Directory& the_directory) // Exercise 1.8: please com
 	string name;
 	cout << "Enter name: ";
 	getline(cin, name);
+	string numb = the_directory.remove_entry(name);
+	if (numb != "") {
+		cout << "The entry for " << name << " with this number " << numb << "has been removed\n";
+	}
+	else {
+		cout << name << " is not in the directory\n";
+	}
 	// Complete the rest of this function 
 	
 }
